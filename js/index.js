@@ -59,8 +59,10 @@ anchors[3].textContent = siteContent["nav"]["nav-item-4"];
 anchors[4].textContent = siteContent["nav"]["nav-item-5"];
 anchors[5].textContent = siteContent["nav"]["nav-item-6"];
 
-const title = document.querySelector("h1");
-title.textContent = `DOM Is Awesome`;
+// const title = document.querySelector("h1");
+// title.textContent = `DOM Is Awesome`;
+
+document.querySelector("h1").innerHTML ="DOM<br> Is<br> Awesome";
 
 const bttnSelect = document.querySelector("button");
 bttnSelect.textContent = siteContent["cta"]["button"];
@@ -82,9 +84,9 @@ allPTags[1].textContent = siteContent['main-content']["about-content"];
 allPTags[2].textContent = siteContent['main-content']["services-content"]
 allPTags[3].textContent = siteContent['main-content']["product-content"]
 allPTags[4].textContent = siteContent['main-content']["vision-content"]
-allPTags[5].textContent = siteContent['contact']['address'];
+allPTags[5].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
 allPTags[6].textContent = siteContent['contact']['phone'];
-allPTags[6].textContent = siteContent['contact']['email'];
+allPTags[7].textContent = siteContent['contact']['email'];
 
 const footer = document.querySelector("footer");
 footer.textContent = siteContent["footer"]["copyright"];
@@ -108,7 +110,7 @@ navBar.prepend(startElement);
 navBar.appendChild(newChildElement);
 
 anchors.forEach( element => {
-  return element.style.color = "green";
+  element.style.color = "green";
 });
 
 
