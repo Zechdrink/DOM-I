@@ -60,23 +60,56 @@ anchors[4].textContent = siteContent["nav"]["nav-item-5"];
 anchors[5].textContent = siteContent["nav"]["nav-item-6"];
 
 const title = document.querySelector("h1");
-title.textContent = siteContent["cta"]["h1"];
+title.textContent = `DOM Is Awesome`;
 
 const bttnSelect = document.querySelector("button");
 bttnSelect.textContent = siteContent["cta"]["button"];
 
-//-----------------------------MAIN CONTENT-------------------------
+//-----------------------------The Rest of the Content-------------------------
 //____________________________________________________________________
 
 const headerFours = document.querySelectorAll("h4");
 headerFours[0].textContent = siteContent["main-content"]["features-h4"];
 headerFours[1].textContent = siteContent["main-content"]["about-h4"];
 headerFours[2].textContent = siteContent["main-content"]["services-h4"];
-headerFours[3].textContent = siteContent["main-content"]["product--h4"];
+headerFours[3].textContent = siteContent["main-content"]["product-h4"];
 headerFours[4].textContent = siteContent["main-content"]["vision-h4"];
 headerFours[5].textContent = siteContent["contact"]["contact-h4"];
 
+const allPTags = document.querySelectorAll("p");
+allPTags[0].textContent = siteContent['main-content']["features-content"];
+allPTags[1].textContent = siteContent['main-content']["about-content"];
+allPTags[2].textContent = siteContent['main-content']["services-content"]
+allPTags[3].textContent = siteContent['main-content']["product-content"]
+allPTags[4].textContent = siteContent['main-content']["vision-content"]
+allPTags[5].textContent = siteContent['contact']['address'];
+allPTags[6].textContent = siteContent['contact']['phone'];
+allPTags[6].textContent = siteContent['contact']['email'];
 
+const footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
+
+//--------------------------TASK 4 -----------------------------------------
+//__________________________________________________________________________
+
+const navBar = document.querySelector('nav');
+
+let newChildElement = document.createElement('a');
+newChildElement.textContent = 'End';
+
+let startElement = document.createElement('a');
+startElement.textContent = "Start";
+
+newChildElement.style.color = "blue";
+startElement.style.color = "red";
+
+
+navBar.prepend(startElement);
+navBar.appendChild(newChildElement);
+
+anchors.forEach( element => {
+  return element.style.color = "green";
+});
 
 
 
