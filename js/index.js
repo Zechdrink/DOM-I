@@ -37,6 +37,81 @@ const siteContent = {
   },
 };
 
+
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+const logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+// ---------------- NAV BAR + IMAGES + CTA  -----------------------
+// ______________________________________________________________
+
+const headerImg = document.getElementById("cta-img");
+headerImg.setAttribute('src', siteContent['cta']['img-src']);
+
+const middleImg = document.getElementById("middle-img");
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+const anchors = document.querySelectorAll('a');
+anchors[0].textContent = siteContent["nav"]["nav-item-1"];
+anchors[1].textContent = siteContent["nav"]["nav-item-2"];
+anchors[2].textContent = siteContent["nav"]["nav-item-3"];
+anchors[3].textContent = siteContent["nav"]["nav-item-4"];
+anchors[4].textContent = siteContent["nav"]["nav-item-5"];
+anchors[5].textContent = siteContent["nav"]["nav-item-6"];
+
+// const title = document.querySelector("h1");
+// title.textContent = `DOM Is Awesome`;
+
+document.querySelector("h1").innerHTML ="DOM<br> Is<br> Awesome";
+
+const bttnSelect = document.querySelector("button");
+bttnSelect.textContent = siteContent["cta"]["button"];
+
+//-----------------------------The Rest of the Content-------------------------
+//____________________________________________________________________
+
+const headerFours = document.querySelectorAll("h4");
+headerFours[0].textContent = siteContent["main-content"]["features-h4"];
+headerFours[1].textContent = siteContent["main-content"]["about-h4"];
+headerFours[2].textContent = siteContent["main-content"]["services-h4"];
+headerFours[3].textContent = siteContent["main-content"]["product-h4"];
+headerFours[4].textContent = siteContent["main-content"]["vision-h4"];
+headerFours[5].textContent = siteContent["contact"]["contact-h4"];
+
+const allPTags = document.querySelectorAll("p");
+allPTags[0].textContent = siteContent['main-content']["features-content"];
+allPTags[1].textContent = siteContent['main-content']["about-content"];
+allPTags[2].textContent = siteContent['main-content']["services-content"]
+allPTags[3].textContent = siteContent['main-content']["product-content"]
+allPTags[4].textContent = siteContent['main-content']["vision-content"]
+allPTags[5].innerHTML = "123 Way 456 Street<br>Somewhere, USA";
+allPTags[6].textContent = siteContent['contact']['phone'];
+allPTags[7].textContent = siteContent['contact']['email'];
+
+const footer = document.querySelector("footer");
+footer.textContent = siteContent["footer"]["copyright"];
+
+//--------------------------TASK 4 -----------------------------------------
+//__________________________________________________________________________
+
+const navBar = document.querySelector('nav');
+
+let newChildElement = document.createElement('a');
+newChildElement.textContent = 'End';
+
+let startElement = document.createElement('a');
+startElement.textContent = "Start";
+
+newChildElement.style.color = "blue";
+startElement.style.color = "red";
+
+
+navBar.prepend(startElement);
+navBar.appendChild(newChildElement);
+
+anchors.forEach( element => {
+  element.style.color = "green";
+});
+
+
+
